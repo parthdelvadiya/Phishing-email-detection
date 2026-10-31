@@ -1,0 +1,70 @@
+{
+    "dataset": "D:\\AAPARTH\\LEARNING\\Phishing-email detection\\Backend\\data\\processed\\emails.csv",
+    "dataset_size": 86456,
+    "split": {
+        "train": 60519,
+        "validation": 12968,
+        "test": 12969
+    },
+    "features": {
+        "tfidf": 15000,
+        "structural": 13,
+        "total": 15013
+    },
+    "lightgbm": {
+        "default_threshold_0.50": {
+            "accuracy": 0.9871231397948955,
+            "precision": 0.980522355024347,
+            "recall": 0.9947604790419161,
+            "f1": 0.9875901018057517,
+            "auc_roc": 0.9990113666767277,
+            "confusion_matrix": [
+                [
+                    6157,
+                    132
+                ],
+                [
+                    35,
+                    6645
+                ]
+            ]
+        },
+        "cost_tuned": {
+            "threshold": 0.36,
+            "metrics": {
+                "accuracy": 0.9805690492713394,
+                "precision": 0.9655272305909618,
+                "recall": 0.9979041916167665,
+                "f1": 0.9814487632508834,
+                "auc_roc": 0.9990113666767277,
+                "confusion_matrix": [
+                    [
+                        6051,
+                        238
+                    ],
+                    [
+                        14,
+                        6666
+                    ]
+                ]
+            }
+        }
+    },
+    "random_forest": {
+        "accuracy": 0.9665355848561955,
+        "precision": 0.9494818652849741,
+        "recall": 0.9875748502994012,
+        "f1": 0.9681538009979455,
+        "auc_roc": 0.9960718648567074,
+        "confusion_matrix": [
+            [
+                5938,
+                351
+            ],
+            [
+                83,
+                6597
+            ]
+        ]
+    }
+}
